@@ -1,0 +1,57 @@
+public class Challenge {
+	public static String sexagenary(int year) {
+		String currentStem = " ";
+		String currentBranch = " ";
+		int stemYear = 1;
+		int branchYear = 1;
+		for(int currentYear = 1; currentYear<=year; currentYear++){
+			
+			if(stemYear==1||stemYear==2){
+				currentStem = "Wood";
+			}else if(stemYear==3||stemYear==4){
+				currentStem = "Fire";
+			}else if(stemYear==5||stemYear==6){
+				currentStem = "Earth";
+			}else if(stemYear==7||stemYear==8){
+				currentStem = "Metal";
+			}else if(stemYear==9){
+				currentStem = "Water";
+			}else if(stemYear==10){
+				currentStem = "Water";
+				stemYear = 0;
+			}
+			
+			if(branchYear==1){
+				currentBranch = "Rat";
+			}else if(branchYear==2){
+				currentBranch = "Ox";
+			}else if(branchYear==3){
+				currentBranch = "Tiger";
+			}else if(branchYear==4){
+				currentBranch = "Rabbit";
+			}else if(branchYear==5){
+				currentBranch = "Dragon";
+			}else if(branchYear==6){
+				currentBranch = "Snake";
+			}else if(branchYear==7){
+				currentBranch = "Horse";
+			}else if(branchYear==8){
+				currentBranch = "Sheep";
+			}else if(branchYear==9){
+				currentBranch = "Monkey";
+			}else if(branchYear==10){
+				currentBranch = "Rooster";
+			}else if(branchYear==11){
+				currentBranch = "Dog";
+			}else if(branchYear==12){
+				currentBranch = "Pig";
+				branchYear = 0;
+			}
+			
+			stemYear++;
+			branchYear++;
+		}
+		StringBuilder currentCycle = new StringBuilder(currentStem + " " + currentBranch);
+		return currentCycle.toString();
+	}
+}
